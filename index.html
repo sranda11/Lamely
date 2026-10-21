@@ -1,0 +1,356 @@
+<!doctype html><html lang="sk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#f6f5f3"><title>Lamelová stena • Studio</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script><style>
+:root{--bg:#f6f5f3;--card:#fff;--tx:#232321;--mut:#888782;--ac:#302d29;--bd:#eceae6;--in:#faf9f7}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.45 -apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif}button,input,select{font:inherit}button{cursor:pointer;border:1px solid var(--bd);background:#fff;color:var(--tx);border-radius:14px;padding:11px 15px;font-weight:600;transition:background .15s}button:hover{background:#f5f2ef}button:active{transform:scale(.99)}button.pri{background:#292826;color:#fff;border-color:#292826}button.pri:hover{background:#46423d}.app{max-width:1220px;margin:auto;padding:26px 24px 70px}.header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:24px}.header h1{font-size:30px;letter-spacing:-1.2px;line-height:1.05;margin:0;font-weight:750}.eyebrow{font-size:10px;font-weight:750;letter-spacing:4px;color:#8a8985;margin-top:8px}.header-pill{border:1px solid var(--bd);padding:11px 16px;border-radius:30px;background:#fff;font-size:13px;font-weight:650}.tabs{display:flex;gap:4px;background:#eae8e5;padding:5px;border-radius:18px;margin-bottom:20px;overflow:auto}.tabs button{flex:1;white-space:nowrap;background:transparent;border:0;padding:11px 14px;color:#77746f;font-size:13px}.tabs button.active{background:#fff;color:#242321;box-shadow:0 2px 8px #0000000c}.layout{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(345px,.9fr);gap:18px;align-items:start}.card{background:var(--card);border:1px solid #f0eeeb;border-radius:23px;padding:22px;box-shadow:0 9px 30px #29201907}.card h2{font-size:16px;letter-spacing:-.3px;margin:0 0 18px}.mut{color:var(--mut);font-size:12px}.preview{position:sticky;top:18px}.preview-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.preview-title h2{margin:0}.view-switch{display:flex;gap:3px;background:#f1efec;border-radius:13px;padding:4px}.view-switch button{border:0;background:transparent;padding:8px 13px;border-radius:10px;font-size:12px}.view-switch button.active{background:white;box-shadow:0 2px 5px #00000012}.draw{background:#fff;border-radius:16px;overflow:auto;min-height:310px;display:none;border:1px solid #f1efec}.draw.active{display:flex;align-items:center}.draw svg{display:block;min-width:500px;width:100%}.preview-note{font-size:12px;color:#888;margin:13px 0 0}.controls{display:grid;gap:16px}.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}label{display:block;font-size:12px;font-weight:550;color:#6f6c67}input:not([type=checkbox]),select{display:block;width:100%;background:#faf9f7;color:#252422;border:1px solid #eeece9;border-radius:12px;padding:12px;margin-top:6px;font-size:15px;outline:none;min-width:0}input:focus,select:focus{border-color:#a48c73;box-shadow:0 0 0 3px #c5a78525}input:disabled{opacity:.45}.res{background:#f5f0e9;border-radius:13px;padding:13px;margin-top:14px;font-size:13px;line-height:1.6}.warn{color:#b63b31;font-size:13px;margin-top:8px}.row{display:flex;flex-wrap:wrap;align-items:end;gap:9px;border:1px solid #eeece9;background:#fcfbfa;border-radius:15px;padding:12px;margin-bottom:10px}.row b{font-size:13px;min-width:100%;margin-bottom:1px}.row label{flex:1 1 88px;min-width:70px}.row .bt{display:flex;gap:4px;margin-left:auto}.row .bt button{padding:9px 11px}.acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.acts button{font-size:13px}.switchline{display:flex;align-items:center;gap:12px;margin-bottom:14px;color:#292826;font-size:14px;font-weight:650}.switchline input{appearance:none;width:43px;height:25px;border-radius:20px;background:#d5d2cd;position:relative;cursor:pointer;margin:0;flex-shrink:0}.switchline input:after{content:"";position:absolute;left:3px;top:3px;width:19px;height:19px;border-radius:50%;background:white;transition:transform .2s}.switchline input:checked{background:#25875e}.switchline input:checked:after{transform:translateX(18px)}.output{display:grid;gap:9px}.output button{width:100%;padding:15px}.section{scroll-margin-top:18px}.small-note{font-size:12px;color:#999;margin-top:12px}.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:14px}.summary .metric{border:1px solid #eeeae5;border-radius:14px;padding:13px}.metric small{display:block;color:#96928c;font-size:11px}.metric strong{display:block;margin-top:4px;font-size:14px}.foot{margin-top:18px;text-align:center;color:#a29e99;font-size:11px}@media(max-width:850px){.app{padding:18px 14px 40px}.header h1{font-size:27px}.layout{display:flex;flex-direction:column}.preview{position:static;width:100%}.controls{width:100%}.card{padding:17px;border-radius:20px}.draw{min-height:270px}.tabs button{padding:11px 12px}.header-pill{padding:10px 12px}}@media(max-width:430px){.two{grid-template-columns:1fr}.draw svg{min-width:440px}.summary{grid-template-columns:1fr 1fr}.header-pill{font-size:11px}}@media print{.tabs,.header-pill,.output{display:none}}
+
+/* Mobile: full-width previews, readable controls, no clipped canvas */
+@media(max-width:850px){.layout{display:flex;flex-direction:column}.preview,.controls{width:100%;min-width:0}.draw{width:100%;min-width:0;overflow-x:auto;-webkit-overflow-scrolling:touch}.draw svg{min-width:0!important;width:100%!important;height:auto;max-width:100%}.preview{position:static}.row label{flex:1 1 42%;min-width:0}.row .bt{width:100%;justify-content:flex-end}.tabs{position:sticky;top:0;z-index:5}.card{min-width:0}}
+@media(max-width:430px){.preview-title{flex-wrap:wrap;gap:10px}.view-switch{width:100%}.view-switch button{flex:1}.row label{flex-basis:42%}.header-pill{display:none}.app{padding-left:10px;padding-right:10px}.draw{min-height:160px}}
+</style></head><body>
+<main class="app"><header class="header"><div><h1>Lamelová stena</h1><div class="eyebrow">KALKULAČKA · STUDIO</div></div><div class="header-pill">▣ &nbsp; Výrobný návrh</div></header>
+<nav class="tabs" aria-label="Navigácia"><button class="active" data-tab="navrh">◈ &nbsp; Návrh</button><button data-tab="rozmery">⌗ &nbsp; Rozmery</button><button data-tab="prvky">▦ &nbsp; Prvky</button><button data-tab="vystup">▤ &nbsp; Výstup</button></nav>
+<div class="layout"><section class="preview card" id="navrh"><div class="preview-title"><h2>Náhľad projektu</h2><div class="view-switch"><button class="active" data-view="v3">3D</button><button data-view="v1">Spredu</button><button data-view="v2">Zhora</button></div></div><div class="draw" id="v1"></div><div class="draw" id="v2"></div><div class="draw active" id="v3"></div><div class="preview-note">Technická axonometria · presné rozmery vo výrobnom PDF</div><div class="summary"><div class="metric"><small>Lamely</small><strong id="sumSlats">—</strong></div><div class="metric"><small>Medzera</small><strong id="sumGap">—</strong></div><div class="metric"><small>DTD dielce</small><strong id="sumDTD">—</strong></div></div></section>
+<div class="controls"><section class="card section" id="rozmery"><h2>▣ &nbsp; Rozmery steny</h2><label>Názov zákazky<input id="name" placeholder="napr. Novák – obývačka"></label><div class="g2" style="margin-top:14px"><label>Šírka steny (mm)<input id="W" type="number" value="1000"></label><label>Výška steny (mm)<input id="H" type="number" value="2600"></label></div><h2 style="margin-top:22px">▥ &nbsp; Rozmery lamely</h2><div class="g2"><label>Šírka lamely (mm)<input id="w" type="number" value="40"></label><label>Hĺbka lamely (mm)<input id="d" type="number" value="20"></label></div><label>Orientačná medzera (mm)<input id="g" type="number" value="20"></label><div class="res" id="res"></div><div class="warn" id="warn"></div></section>
+<section class="card section" id="prvky"><h2>▤ &nbsp; Prvky na stene</h2><button id="dir" style="width:100%;text-align:left"></button><div class="mut" id="hint" style="margin:10px 0"></div><div id="blocks"></div><div class="acts"><button data-add="s">＋ Lamely</button><button data-add="p">＋ Polička</button><button data-add="c">＋ Skrinka</button></div><p class="small-note">Prázdna výška bloku sa dopočíta automaticky zo zvyšnej výšky steny.</p></section>
+<section class="card"><h2>▥ &nbsp; Delenie nosnej DTD</h2><label class="switchline"><input id="splitDTD" type="checkbox"> Deliť DTD na dielce</label><label>Maximálna šírka dielca (mm)<input id="dtdMax" type="number" min="1" step="1" value="700"></label><div class="res" id="dtdResult"></div><div class="small-note">Zvislé spoje sú v osi lamely s toleranciou najviac ±2 mm. Šírky DTD sú vždy celé mm.</div></section>
+<section class="card section" id="vystup"><h2>▤ &nbsp; Výrobný výstup</h2><div class="output"><button class="pri" id="bdl">↓ &nbsp; Vygenerovať výrobný výkres (PDF)</button><button id="bsh">↗ &nbsp; Zdieľať PDF</button></div><div class="mut" id="msg" style="margin-top:10px"></div><div class="small-note">Pred výrobou skontroluj rozmery a rezací zoznam.</div></section></div></div><footer class="foot">LAMELOVÁ STENA · V4</footer></main>
+<script>
+const $=id=>document.getElementById(id);
+const fmt=v=>String(Math.round(v*10)/10).replace(".",",");
+const NAME={s:"Lamely",c:"Skrinka",p:"Polička"};
+const FILL={s:["#e0bb86","#efd3a8","#b8935f"],c:["#cfd4d8","#e4e8eb","#a9afb4"],p:["#b98b57","#cfa673","#8f6a3f"]};
+const DC="#1a5fb4";
+const P={name:"",W:1000,H:2600,w:40,d:20,g:20,dir:"down",splitDTD:false,dtdMax:700};
+let B=[{t:"s",h:"",d:""},{t:"c",h:400,d:350,ol:50,rr:50,lift:150}];
+
+/* ---------- výpočet ---------- */
+function dtdPieces(W,w,gap,n,maxWidth,enabled){
+ // Výrobné šírky v celých mm; spoj maximálne 2 mm od osi lamely.
+ if(!Number.isInteger(W)||W<=0)return null;
+ if(!enabled)return [W];
+ if(!(maxWidth>0))return null;
+ const limit=Math.floor(maxWidth);
+ const centers=Array.from({length:n},(_,i)=>i*(w+gap)+w/2);
+ const pts=[{x:0,dev:0}];
+ for(const center of centers){
+  for(let x=Math.ceil(center-2);x<=Math.floor(center+2);x++){
+   if(x>0&&x<W&&Math.abs(x-center)<=2+1e-7)pts.push({x,dev:Math.abs(x-center)});
+  }
+ }
+ pts.push({x:W,dev:0});pts.sort((a,b)=>a.x-b.x);
+ const unique=pts.filter((v,i)=>!i||v.x!==pts[i-1].x);
+ const dp=Array(unique.length).fill(null);dp[0]={count:0,cost:0,prev:-1};
+ for(let j=1;j<unique.length;j++)for(let i=0;i<j;i++){
+  const width=unique[j].x-unique[i].x;
+  if(!dp[i]||width>limit||width<=0)continue;
+  const count=dp[i].count+1;
+  const cost=dp[i].cost+(limit-width)**2+unique[j].dev**2*4;
+  if(!dp[j]||count<dp[j].count||(count===dp[j].count&&cost<dp[j].cost))dp[j]={count,cost,prev:i};
+ }
+ if(!dp[unique.length-1])return null;
+ const out=[];let j=unique.length-1;
+ while(j>0){const i=dp[j].prev;out.unshift(unique[j].x-unique[i].x);j=i}
+ return out;
+}
+
+function calc(){
+ const {W,H,w,d,g}=P;
+ if(!(W>0&&H>0&&w>0&&d>0&&g>=0))return null;
+ const warn=[];
+ if(!Number.isInteger(W))warn.push("Šírka steny musí byť celé číslo v mm, aby DTD mala celočíselné rozmery.");
+ let n=Math.max(2,Math.round((W+g)/(w+g)));
+ while(n>2&&(W-n*w)<0)n--;
+ const gap=(W-n*w)/(n-1);
+ if(gap<0)warn.push("Lamely sa do šírky nezmestia.");
+ let fixed=0,autos=0;
+ const O0=P.dir==="up"?[...B].reverse():B;const O=[];
+ O0.forEach(b=>{O.push(b);if(b.t==="c"&&+b.lift>0)O.push({t:"s",h:+b.lift})});
+ for(let k=O.length-1;k>=0;k--){const b=O[k];if(b.t!=="p"||!(+b.fb>0))continue;
+  let fb=0,ai=-1;O.slice(k+1).forEach((q,j)=>{if(q.t!=="p"&&!(+q.h>0)){if(ai<0)ai=k+1+j}else fb+=+q.h||0});
+  const gap=+b.fb-fb;
+  if(ai>=0){if(gap>0)O[ai]={...O[ai],h:gap};else warn.push("Polica je nižšie, než dovoľujú bloky pod ňou.")}
+  else if(gap>0)O.splice(k+1,0,{t:"s",h:gap});
+  else if(gap<0)warn.push("Polica je nižšie, než dovoľujú bloky pod ňou.")}
+ O.forEach(b=>{const h=+b.h;if(b.t!=="p"&&!(h>0))autos++;else fixed+=h||0});
+ let autoH=autos?(H-fixed)/autos:0;
+ if(autos&&autoH<=0){warn.push("Bloky presahujú výšku steny.");autoH=0}
+  if(fixed>H+0.01)warn.push("Zadané bloky presahujú výšku steny.");
+ let y=0;
+ const items=O.map(b=>{const auto=b.t!=="p"&&!(+b.h>0);const h=auto?autoH:(+b.h||0);
+  const dep=b.t==="s"?d:(+b.d||d);const it={t:b.t,h,y,dep,off:0,x0:b.t==="s"?0:(+b.ol||0),rr:b.t==="s"?0:(+b.rr||0),bw:b.t==="s"?W:W-(+b.ol||0)-(+b.rr||0)};y+=h;return it});
+ if(!autos&&Math.abs(y-H)>0.5)warn.push("Súčet blokov ("+fmt(y)+") nesedí s výškou steny ("+fmt(H)+").");
+ if(items.some(i=>i.bw<=0))warn.push("Odskok zľava a sprava je väčší než šírka steny.");
+  if(items.some(i=>i.h<=0))warn.push("Niektorý blok má nulovú alebo zápornú výšku.");
+  if(items.some(i=>i.dep<=0))warn.push("Hĺbka bloku musí byť kladná.");
+  if(B.some(b=>[b.h,b.d,b.ol,b.rr,b.lift,b.fb].some(v=>v!==undefined&&v!==""&&Number(v)<0)))warn.push("Záporné rozmery nie sú povolené.");
+  // Hrany skrinky/poličky nesmú pretínať lamelu; môžu ležať kdekoľvek v medzere.
+  const eps=0.001;
+  const cuts=Array.from({length:Math.min(n,10000)}).map((_,i)=>[i*(w+gap),i*(w+gap)+w]);
+  items.forEach((it,i)=>{
+   if(it.t==="s")return;
+   for(const [edge,label] of [[it.x0,"ľavá"],[it.x0+it.bw,"pravá"]]){
+    if(cuts.some(([a,b])=>edge>a+eps&&edge<b-eps)){
+     const edges=cuts.flat().concat([0,W]);
+     const nearest=edges.reduce((best,x)=>Math.abs(x-edge)<Math.abs(best-edge)?x:best,edges[0]);
+     warn.push(`${NAME[it.t]} (blok ${i+1}): ${label} hrana ${fmt(edge)} mm zasahuje do lamely. Najbližšia prípustná hrana: ${fmt(nearest)} mm.`);
+    }
+   }
+  });
+ const dtd=dtdPieces(W,w,gap,n,P.dtdMax,P.splitDTD);
+ if(!dtd)warn.push("DTD sa nedá rozdeliť na celé mm s toleranciou spoja ±2 mm od osi lamely.");
+ const alts=[n-1,n+1].filter(k=>k>=1&&W-k*w>=0).map(k=>({k,gap:k===1?0:(W-k*w)/(k-1)}));
+ return {W,H:y||H,w,d,g,n,gap,items,warn,alts,dtd,maxD:Math.max(d,...items.map(i=>i.dep+i.off))};
+}
+
+/* ---------- primitíva ---------- */
+const R=(x,y,w,h,f)=>({k:"r",x,y,w,h,f});
+const L=(x1,y1,x2,y2,c,d)=>({k:"l",x1,y1,x2,y2,c:c||"#333333",d});
+const PG=(p,f)=>({k:"p",p,f});
+const T=(x,y,txt,sz=8,a="middle",rot=0,ox=0,oy=0,c=DC)=>({k:"t",x,y,txt,sz,a,rot,ox,oy,c});
+function dimH(o,x1,x2,y,txt,tk,up=1){o.push(L(x1,y,x2,y,DC),L(x1,y-tk,x1,y+tk,DC),L(x2,y-tk,x2,y+tk,DC));
+ if(txt)o.push(T((x1+x2)/2,y,txt,8,"middle",0,0,up>0?-3:10))}
+function dimV(o,y1,y2,x,txt,tk,right){o.push(L(x,y1,x,y2,DC),L(x-tk,y1,x+tk,y1,DC),L(x-tk,y2,x+tk,y2,DC));
+ if(txt)o.push(T(x,(y1+y2)/2,txt,8,"middle",-90,right?10:-3,0))}
+function chain(o,m,y,tk){const {w,gap,n}=m;if(n<2||!m.items.some(i=>i.t==="s"))return;
+ o.push(L(0,y,2*w+gap,y,DC));[0,w,w+gap,2*w+gap].forEach(x=>o.push(L(x,y-tk,x,y+tk,DC)));
+ o.push(T(w/2,y,fmt(w),8,"middle",0,0,-3),T(w+gap/2,y,fmt(gap),8,"middle",0,0,10))}
+const dims=m=>{const M=Math.max(m.W,m.H);return {M,off:M*.045,tk:M*.01}};
+
+/* ---------- pohľady ---------- */
+function slatSegs(m){
+ const {w,n,gap,items}=m,out=[];
+ for(let i=0;i<n;i++){const x=i*(w+gap),segs=[];
+  items.forEach((b,bi)=>{
+   const pass=b.t==="s"||x+w<=b.x0+1e-6||x>=b.x0+b.bw-1e-6;
+   if(!pass||!(b.h>0))return;
+   const last=segs[segs.length-1];
+   if(last&&Math.abs(last[1]-b.y)<1e-6){last[1]=b.y+b.h;last[3]=bi}else segs.push([b.y,b.y+b.h,bi,bi]);
+  });
+  out.push({x,segs});}
+ return out}
+function front(m){
+ const o=[],{W,H,w,n,gap}=m,{off,tk}=dims(m);
+ slatSegs(m).forEach(c=>c.segs.forEach(s=>o.push(R(c.x,s[0],w,s[1]-s[0],FILL.s[0]))));
+ m.items.forEach(b=>{
+  if(b.t==="s")return;
+  else{o.push(R(b.x0,b.y,b.bw,b.h,FILL[b.t][0]));if(b.h>=40)o.push(T(b.x0+b.bw/2,b.y+b.h/2,b.t==="c"?"skrinka":"polička",9,"middle",0,0,3,"#333333"));if(b.x0>0||b.rr>0){const yy=b.y+b.h*(b.h>=40?.85:.5);if(b.x0>0)dimH(o,0,b.x0,yy,fmt(b.x0),tk);if(b.rr>0)dimH(o,W-b.rr,W,yy,fmt(b.rr),tk);dimH(o,b.x0,b.x0+b.bw,yy,fmt(b.bw),tk)}}
+ });
+ chain(o,m,-off,tk);
+ dimH(o,0,W,H+off,fmt(W),tk);
+ dimV(o,0,H,W+off,fmt(H),tk,true);
+ m.items.forEach(b=>{if(b.h>0)dimV(o,b.y,b.y+b.h,-off,fmt(b.h),tk)});
+ return o}
+
+function plan(m){
+ const o=[],{W,w,n,gap,maxD}=m,{M,off,tk}=dims(m);
+ // Nosná DTD za lamelami: zakreslenie spojov a reťazových kót šírok dielcov.
+ const backing=M*.027;
+ o.push(R(0,-backing,W,backing,"#d5d0c8"));
+ if(m.dtd){let xx=0;const yy=-(off+M*.075);
+  m.dtd.forEach((width,i)=>{const x0=xx;xx+=width;
+   if(i<m.dtd.length-1)o.push(L(xx,-backing,xx,0,"#b03a36"));
+   dimH(o,x0,xx,yy,String(width),tk);
+  });
+  // Popis je v nadpise výkresu; samostatný text by kolidoval s kótami.
+ }
+
+ [...m.items].reverse().forEach(b=>{
+  if(b.t==="s")for(let i=0;i<n;i++)o.push(R(i*(w+gap),0,w,b.dep,FILL.s[0]));
+  else o.push(R(b.x0,0,b.bw,b.dep,FILL[b.t][0]));
+ });
+ chain(o,m,-(off+M*.02),tk);
+ dimH(o,0,W,maxD+off,fmt(W),tk);
+ const seen=[];m.items.forEach(b=>{if(!seen.some(s=>s[0]===b.off&&s[1]===b.dep))seen.push([b.off,b.dep])});
+ seen.sort((a,b)=>a[1]-b[1]).forEach((s,i)=>{const x=W+off*(i+1);dimV(o,s[0],s[0]+s[1],x,fmt(s[1]),tk,true);if(s[0]>0)dimV(o,0,s[0],x,fmt(s[0]),tk,true)});
+ return o}
+
+function axo(m){
+ const o=[],{W,H,w,n,gap,maxD}=m,{off,tk}=dims(m),kx=.41,ky=.29;
+ const box=(x,yd,bw,bh,dep,t,ph)=>{const f=maxD-dep,X=x+f*kx,Y=yd-f*ky,dx=dep*kx,dy=-dep*ky,c=FILL[t];
+  if(ph==="t")o.push(PG([[X,Y],[X+bw,Y],[X+bw+dx,Y+dy],[X+dx,Y+dy]],c[1]));
+  else{o.push(PG([[X+bw,Y],[X+bw+dx,Y+dy],[X+bw+dx,Y+bh+dy],[X+bw,Y+bh]],c[2]));o.push(R(X,Y,bw,bh,c[0]))}};
+ const SG=slatSegs(m);
+ for(let j=m.items.length-1;j>=0;j--){
+  SG.forEach(c=>c.segs.forEach(s=>{if(s[3]!==j)return;if(s[0]<1e-6)box(c.x,s[0],w,s[1]-s[0],m.d,"s","t");box(c.x,s[0],w,s[1]-s[0],m.d,"s","fs")}));
+  const b=m.items[j];if(b.t!=="s"){box(b.x0,b.y,b.bw,b.h,b.dep,b.t,"t");box(b.x0,b.y,b.bw,b.h,b.dep,b.t,"fs")}}
+ dimH(o,0,W,H+off,fmt(W),tk);dimV(o,0,H,-off,fmt(H),tk);
+ return o}
+
+/* ---------- vykresľovanie ---------- */
+function bnds(l){let a=1e9,b=1e9,c=-1e9,d=-1e9;const u=(x,y)=>{a=Math.min(a,x);b=Math.min(b,y);c=Math.max(c,x);d=Math.max(d,y)};
+ l.forEach(e=>{if(e.k==="r"){u(e.x,e.y);u(e.x+e.w,e.y+e.h)}else if(e.k==="l"){u(e.x1,e.y1);u(e.x2,e.y2)}else if(e.k==="p")e.p.forEach(q=>u(q[0],q[1]))});
+ return {x:a,y:b,w:c-a,h:d-b}}
+function place(b,box,m,s){const iw=box.w-2*m,ih=box.h-2*m;s=s||Math.min(iw/b.w,ih/b.h);
+ const ox=box.x+m+(iw-b.w*s)/2-b.x*s,oy=box.y+m+(ih-b.h*s)/2-b.y*s;return {s,X:x=>ox+x*s,Y:y=>oy+y*s}}
+const esc=t=>String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;");
+function toSVG(l){
+ const b=bnds(l),Wd=900,m=18,s0=Math.min((Wd-2*m)/b.w,(520-2*m)/b.h),Hd=b.h*s0+2*m,p=place(b,{x:0,y:0,w:Wd,h:Hd},m,s0),U=1.4;let s="";
+ l.forEach(e=>{
+  if(e.k==="r")s+=`<rect x="${p.X(e.x)}" y="${p.Y(e.y)}" width="${e.w*p.s}" height="${e.h*p.s}" fill="${e.f}" stroke="#333" stroke-width=".8"/>`;
+  else if(e.k==="l")s+=`<line x1="${p.X(e.x1)}" y1="${p.Y(e.y1)}" x2="${p.X(e.x2)}" y2="${p.Y(e.y2)}" stroke="${e.c}" stroke-width=".8"/>`;
+  else if(e.k==="p")s+=`<polygon points="${e.p.map(q=>p.X(q[0])+","+p.Y(q[1])).join(" ")}" fill="${e.f}" stroke="#333" stroke-width=".8"/>`;
+  else{const x=p.X(e.x)+e.ox*U,y=p.Y(e.y)+e.oy*U;
+   s+=`<text x="${x}" y="${y}" font-size="${e.sz*U}" font-family="Arial,sans-serif" text-anchor="${e.a}" fill="${e.c}"${e.rot?` transform="rotate(${e.rot} ${x} ${y})"`:""}>${esc(e.txt)}</text>`}
+ });
+ return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${Wd} ${Hd}" width="100%">${s}</svg>`}
+
+const strip=t=>String(t).normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+const rgb=h=>[1,3,5].map(i=>parseInt(h.substr(i,2),16));
+function toPDF(doc,l,box){
+ const b=bnds(l),p=place(b,box,6),U=.3528;
+ doc.setLineWidth(.15);
+ l.forEach(e=>{
+  if(e.k==="r"){doc.setFillColor(...rgb(e.f));doc.setDrawColor(51,51,51);doc.rect(p.X(e.x),p.Y(e.y),e.w*p.s,e.h*p.s,"FD")}
+  else if(e.k==="l"){doc.setDrawColor(...rgb(e.c));doc.line(p.X(e.x1),p.Y(e.y1),p.X(e.x2),p.Y(e.y2))}
+  else if(e.k==="p"){doc.setFillColor(...rgb(e.f));doc.setDrawColor(51,51,51);
+   const q=e.p.map(a=>[p.X(a[0]),p.Y(a[1])]);doc.lines(q.slice(1).map((a,i)=>[a[0]-q[i][0],a[1]-q[i][1]]),q[0][0],q[0][1],[1,1],"FD",true)}
+  else{doc.setFontSize(e.sz);doc.setTextColor(...rgb(e.c));
+   doc.text(strip(e.txt),p.X(e.x)+e.ox*U,p.Y(e.y)+e.oy*U,{align:e.a==="middle"?"center":e.a==="end"?"right":"left",angle:e.rot?-e.rot:0})}
+ })}
+
+function totalSlatPieces(m){return slatSegs(m).reduce((sum,col)=>sum+col.segs.filter(seg=>seg[1]>seg[0]).length,0)}
+
+/* ---------- PDF ---------- */
+function makePDF(m){
+ const doc=new window.jspdf.jsPDF({orientation:"landscape",unit:"mm",format:"a3"});
+ const S=strip, ink=[37,39,39], muted=[110,112,112], hair=[207,210,210], paper=[252,251,249];
+ const date=new Date().toLocaleDateString("sk-SK");
+ const rect=(x,y,w,h,fill=false)=>{doc.setDrawColor(...hair);doc.setLineWidth(.18);if(fill){doc.setFillColor(...paper);doc.rect(x,y,w,h,"FD")}else doc.rect(x,y,w,h,"S")};
+ const txt=(t,x,y,size=9,bold=false,color=ink,align="left")=>{doc.setTextColor(...color);doc.setFont("helvetica",bold?"bold":"normal");doc.setFontSize(size);doc.text(S(String(t)),x,y,{align})};
+ const rule=(x,y,w)=>{doc.setDrawColor(...hair);doc.setLineWidth(.15);doc.line(x,y,x+w,y)};
+ const section=(title,x,y,w,h,sub="")=>{rect(x,y,w,h);txt(title.toUpperCase(),x+5,y+8,10,true);if(sub)txt(sub,x+5,y+13,7,false,muted);rule(x+4,y+17,w-8)};
+ const entries=(pairs,x,y,w,step=9)=>pairs.forEach(([k,v],i)=>{const yy=y+i*step;txt(k,x,yy,8,false,muted);txt(v,x+w,yy,8,true,ink,"right");rule(x,yy+2.4,w)});
+ const drawing=(objects,box)=>{
+   // Nezmenene geometricke udaje; tlmena monochromaticka kresba.
+   const bb=bnds(objects), pad=8;
+   if(!(bb.w>0&&bb.h>0))return;
+   const scale=Math.min((box.w-2*pad)/bb.w,(box.h-2*pad)/bb.h);
+   const px=x=>box.x+(box.w-bb.w*scale)/2+(x-bb.x)*scale;
+   const py=y=>box.y+(box.h-bb.h*scale)/2+(y-bb.y)*scale;
+   doc.setLineWidth(.14);
+   for(const e of objects){
+     if(e.k==="r"){doc.setFillColor(...(e.f==="#d5d0c8"?[222,222,219]:e.f===FILL.s[0]?[215,203,188]:[225,226,226]));doc.setDrawColor(95,95,95);doc.rect(px(e.x),py(e.y),e.w*scale,e.h*scale,"FD")}
+     else if(e.k==="l"){doc.setDrawColor(...(e.c==="#b03a36"?[75,75,75]:[125,126,126]));doc.line(px(e.x1),py(e.y1),px(e.x2),py(e.y2))}
+     else if(e.k==="p"){doc.setFillColor(221,214,204);doc.setDrawColor(90,90,90);const q=e.p.map(a=>[px(a[0]),py(a[1])]);doc.lines(q.slice(1).map((a,i)=>[a[0]-q[i][0],a[1]-q[i][1]]),q[0][0],q[0][1],[1,1],"FD",true)}
+     else if(e.k==="t"){const x=px(e.x)+e.ox*.3528,y=py(e.y)+e.oy*.3528;txt(e.txt,x,y,Math.max(5.5,Math.min(8,e.sz)),false,muted,e.a==="middle"?"center":e.a==="end"?"right":"left")}
+   }
+ };
+ const frontExport=(m)=>{
+   const o=[],{W,H,w}=m,{off,tk}=dims(m);
+   slatSegs(m).forEach(c=>c.segs.forEach(seg=>o.push(R(c.x,seg[0],w,seg[1]-seg[0],FILL.s[0]))));
+   const blocks=m.items.filter(b=>b.t!=="s");
+   blocks.forEach(b=>{o.push(R(b.x0,b.y,b.bw,b.h,FILL[b.t][0]));if(b.h>=40)o.push(T(b.x0+b.bw/2,b.y+b.h/2,b.t==="c"?"skrinka":"polička",9,"middle",0,0,3,"#333333"))});
+   chain(o,m,-off,tk);
+   // Kóty skriniek a poličiek sú pod stenou, nie cez nábytok.
+   const bands=[];
+   blocks.forEach(b=>{if(!(b.x0>0||b.rr>0))return;const key=[b.x0,b.bw,b.rr].join("|");if(bands.some(a=>a.key===key))return;bands.push({key,b})});
+   bands.forEach(({b},i)=>{const yy=H+off*(1.0+i*.9);if(b.x0>0)dimH(o,0,b.x0,yy,fmt(b.x0),tk);dimH(o,b.x0,b.x0+b.bw,yy,fmt(b.bw),tk);if(b.rr>0)dimH(o,W-b.rr,W,yy,fmt(b.rr),tk)});
+   dimH(o,0,W,H+off*(2+bands.length*.9),fmt(W),tk);
+   dimV(o,0,H,W+off,fmt(H),tk,true);
+   m.items.forEach(b=>{if(b.h>0)dimV(o,b.y,b.y+b.h,-off,fmt(b.h),tk)});
+   return o;
+ };
+ const cut={};slatSegs(m).forEach(c=>c.segs.forEach(seg=>{const len=Math.round((seg[1]-seg[0])*10)/10;if(len>0)cut[len]=(cut[len]||0)+1}));
+ const cutRows=Object.keys(cut).map(Number).sort((a,b)=>b-a).map(len=>[cut[len]+" ks",fmt(len)+" mm"]);
+ const total=Object.values(cut).reduce((a,b)=>a+b,0);
+ const pageFrame=(num)=>{
+   doc.setFillColor(255,255,255);doc.rect(0,0,420,297,"F");
+   txt("LAMELOVA STENA",12,15,20,true);txt("VYROBNY VYKRES  /  VSETKY ROZMERY V MM",12,22,8,false,muted);
+   txt(P.name||"Bez nazvu zakazky",408,15,11,true,ink,"right");
+   rule(12,27,396);
+   rule(12,282,396);
+   txt("PROJEKT  "+(P.name||"Lamelova stena"),14,288,8);
+   txt("DATUM  "+date,190,288,8);
+   txt("FORMAT  A3",290,288,8);
+   txt(String(num).padStart(2,"0"),404,291,14,true,ink,"right");
+ };
+ pageFrame(1);
+ // A3: rozmery vlavo hore, dva rovnocenne velke pohlady, podorys vlavo dole.
+ section("Zakladne rozmery",12,33,112,91);
+ const components=m.items.filter(b=>b.t!=="s");
+ const componentGroups=new Map();
+ components.forEach(b=>{const key=[b.t,fmt(b.bw),fmt(b.dep),fmt(b.h)].join("|");componentGroups.set(key,(componentGroups.get(key)||0)+1)});
+ const baseRows=[["Sirka steny",fmt(m.W)+" mm"],["Vyska steny",fmt(P.H)+" mm"],["Lamela",fmt(m.w)+" x "+fmt(m.d)],["Medzera",fmt(m.gap)+" mm"],["Lamely celkom",total+" ks"],["DTD dielce",m.dtd?m.dtd.length+" ks":"-"]];
+ const partRows=[...componentGroups].map(([key,count])=>{const [type,w,d,h]=key.split("|");return [NAME[type]+" "+w+" x "+d+" x "+h,count+" ks"]});
+ const allRows=[...baseRows,...partRows];
+ allRows.slice(0,9).forEach(([label,value],i)=>{const yy=53+i*7.4;txt(label,17,yy,7.3,false,muted);txt(value,119,yy,7.6,true,ink,"right");rule(17,yy+2,102)});
+ if(allRows.length>9)txt("POZOR: "+(allRows.length-9)+" poloziek sa nezmestilo",17,120,6.7,true,[175,40,40]);
+ section("Podorys / nosna DTD",12,130,112,81,"Koty dielcov DTD a lamiel");
+ drawing(plan(m),{x:15,y:149,w:106,h:58});
+ section("Pohlad spredu",130,33,136,178,"Koty v mm");
+ drawing(frontExport(m),{x:134,y:53,w:128,h:153});
+ section("Axonometria",272,33,136,178,"Schematicky pohlad");
+ drawing(axo(m),{x:276,y:53,w:128,h:153});
+ section("Rezanie lamiel",12,217,190,59);
+ txt("POCET",17,240,8,true,muted);txt("DLZKA",80,240,8,true,muted);
+ cutRows.slice(0,4).forEach((r,i)=>{txt(r[0],17,248+i*6.2,8.5,true);txt(r[1],80,248+i*6.2,8.5);rule(17,250+i*6.2,178)});
+ if(cutRows.length>4)txt("POZOR: "+(cutRows.length-4)+" dalsich dlzok sa nezmestilo",110,273,7,true,[175,40,40]);
+ section("Dielce nosnej DTD",208,217,200,59);
+ if(m.dtd){
+   const count=m.dtd.length, cols=Math.max(2,Math.min(5,Math.ceil(count/7))), rows=Math.ceil(count/cols);
+   const cellW=190/cols, rowH=Math.min(6.3,35/Math.max(1,rows));
+   const font=Math.max(5.5,Math.min(8.5,cellW/6.3,rowH*1.55));
+   m.dtd.forEach((w,i)=>{const col=Math.floor(i/rows),row=i%rows;
+     const x=213+col*cellW,y=237+row*rowH;
+     txt("D"+(i+1)+"  "+Math.round(w)+" x "+fmt(P.H)+" mm",x,y,font);
+   });
+ }
+ txt("Spoje DTD pod lamelami +/- 2 mm",307,273,7,false,muted,"right");
+ return doc;
+}
+async function out(share){
+ const m=calc(),msg=$("msg");if(!m||m.warn.length){msg.textContent="PDF zablokované: oprav upozornenia pri rozmeroch.";return}
+ if(m.dtd&&m.dtd.length>45){msg.textContent="Príliš veľa dielcov DTD na jednu stranu A3.";return}
+ if(!window.jspdf){msg.textContent="Knižnica PDF sa nenačítala.";return}
+ const blob=makePDF(m).output("blob");
+ const fn="lamelova-stena"+(P.name?"-"+strip(P.name).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,""):"")+".pdf";
+ if(share&&navigator.canShare){try{const f=new File([blob],fn,{type:"application/pdf"});
+  if(navigator.canShare({files:[f]})){await navigator.share({files:[f],title:fn});return}}catch(e){if(e&&e.name==="AbortError")return}}
+ let dl=null;try{dl=window.claude?await window.claude.use("downloads"):null}catch(e){}
+ try{
+  if(dl){await dl.save({filename:fn,data:blob});msg.textContent="PDF pripravené."}
+  else{const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=fn;a.click();msg.textContent="PDF stiahnuté."}
+ }catch(e){msg.textContent=e&&e.code==="declined"?"Zrušené.":"Uloženie sa nepodarilo."}
+}
+
+/* ---------- UI ---------- */
+function update(){
+ ["name","W","H","w","d","g"].forEach(k=>P[k]=k==="name"?$(k).value:parseFloat($(k).value));
+ P.splitDTD=$("splitDTD").checked;
+ P.dtdMax=parseFloat($("dtdMax").value);
+ $("dtdMax").disabled=!P.splitDTD;
+ const m=calc();
+ if(!m){$("res").textContent="Zadaj platné rozmery.";$("warn").textContent="";["v1","v2","v3"].forEach(i=>$(i).innerHTML="");return}
+ $("res").innerHTML=`Celkový počet lamiel: <b>${totalSlatPieces(m)}</b> · medzera: <b>${fmt(m.gap)} mm</b> (zadaná ${fmt(m.g)})`+
+  (m.alts.length?`<div class="mut">Alternatívy: ${m.alts.map(a=>a.k+" ks → "+fmt(a.gap)+" mm").join(" · ")}</div>`:"");
+ $("warn").textContent=m.warn.join(" ");
+ $("dtdResult").textContent=m.dtd?`${m.dtd.length} ks DTD: ${m.dtd.map(x=>Math.round(x)+" × "+fmt(P.H)+" mm").join("; ")}`:"Delenie pri týchto rozmeroch nie je možné.";
+ try{$("v1").innerHTML=toSVG(front(m));$("v2").innerHTML=toSVG(plan(m));$("v3").innerHTML=toSVG(axo(m));}catch(err){console.error("Chyba nahladu:",err);$("v3").textContent="Náhľad sa nepodarilo vykresliť: "+err.message;}
+}
+function renderBlocks(){
+ $("dir").textContent=P.dir==="up"?"Zadávam zdola ↑ (prepnúť na zhora)":"Zadávam zhora ↓ (prepnúť na zdola)";
+ $("hint").textContent=P.dir==="up"?"1. riadok = úplne dole, posledný riadok = úplne hore.":"1. riadok = úplne hore, posledný riadok = úplne dole.";
+ $("blocks").innerHTML=B.map((b,i)=>`<div class="row"><b>${NAME[b.t]}</b>
+ ${b.t==="p"?`<label>hrúbka<select data-i="${i}" data-k="h">${[18,36].map(v=>`<option${+b.h===v?" selected":""}>${v}</option>`).join("")}</select></label>`:`<label>výška<input type="number" data-i="${i}" data-k="h" value="${b.h}" placeholder="auto"></label>`}
+ ${b.t==="s"?"":`<label>hĺbka<input type="number" data-i="${i}" data-k="d" value="${b.d}"></label><label>odskok zľava<input type="number" data-i="${i}" data-k="ol" value="${b.ol||""}" placeholder="0"></label><label>odskok sprava<input type="number" data-i="${i}" data-k="rr" value="${b.rr||""}" placeholder="0"></label>${b.t==="p"?`<label>výška od spodku<input type="number" data-i="${i}" data-k="fb" value="${b.fb||""}" placeholder="voľne"></label>`:""}${b.t==="c"?`<label>nadvihnutie (lamely pod)<input type="number" data-i="${i}" data-k="lift" value="${b.lift||""}" placeholder="0"></label>`:""}`}
+ <div class="bt"><button data-a="up" data-i="${i}">↑</button><button data-a="dn" data-i="${i}">↓</button><button data-a="x" data-i="${i}">✕</button></div></div>`).join("");
+}
+document.addEventListener("change",e=>{if(e.target.id==="splitDTD")update()});
+document.addEventListener("input",e=>{const t=e.target;
+ if(t.dataset.k)B[t.dataset.i][t.dataset.k]=t.value;
+ update()});
+document.addEventListener("click",e=>{const t=e.target.closest("button");if(!t)return;
+ if(t.dataset.add){B.push({s:{t:"s",h:"",d:""},p:{t:"p",h:36,d:250},c:{t:"c",h:600,d:350}}[t.dataset.add]);renderBlocks();update()}
+ else if(t.dataset.a){const i=+t.dataset.i,a=t.dataset.a;
+  if(a==="x")B.splice(i,1);
+  else{const j=a==="up"?i-1:i+1;if(j>=0&&j<B.length)[B[i],B[j]]=[B[j],B[i]]}
+  renderBlocks();update()}});
+$("dir").onclick=()=>{B.reverse();P.dir=P.dir==="up"?"down":"up";renderBlocks();update()};
+$("bdl").onclick=()=>out(false);$("bsh").onclick=()=>out(true);
+renderBlocks();update();
+
+// Navigácia a prepínanie technických pohľadov
+ document.querySelectorAll('[data-tab]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x===btn));document.getElementById(btn.dataset.tab).scrollIntoView({behavior:'smooth',block:'start'});}));
+ document.querySelectorAll('[data-view]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('[data-view]').forEach(x=>x.classList.toggle('active',x===btn));document.querySelectorAll('.draw').forEach(x=>x.classList.toggle('active',x.id===btn.dataset.view));}));
+ const updateBase=update;
+ update=function(){updateBase();const m=calc();if(!m)return;document.getElementById('sumSlats').textContent=totalSlatPieces(m)+' ks';document.getElementById('sumGap').textContent=fmt(m.gap)+' mm';document.getElementById('sumDTD').textContent=m.dtd?m.dtd.length+' ks':'—';};
+ update();
+</script></body></html>
